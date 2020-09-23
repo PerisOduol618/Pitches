@@ -1,0 +1,11 @@
+{% extends 'bootstrap/base.html'%}
+
+<!-- Navbar block  -->
+{% block navbar %}
+    {% include 'navbar.html' %}
+{% endblock %}
+
+{%block styles %}
+  {{super()}}
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Ranga" rel="stylesheet">
+{% endblock %}
