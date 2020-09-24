@@ -7,44 +7,55 @@
 <link href="https://fonts.googleapis.com/css?family=Ranga" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Cormorant+Upright" rel="stylesheet">
-<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
 {%endblock%}
 
 <!-- Content block -->
 {%block content%}
-<div class=back>
-    <!-- <div class="jumbotron text-center" style="color: #fff; padding: 55px 25px;">
-    <h1>Welcome to the Best pitch</h1>
-</div> -->
-<br><br>
-    <div class="container" style="font-family: 'Cormorant Upright', serif;">
-        <div class="row">
-            <div class="col-md-4">
-                <div class="well well-lg" style="text-align: center;">
-                    <h3>Interviews Pitches</h3>
-                    <p>Essentially it’s a short summary about yourself and what you do, in an interview. </p>
-                    <a href="{{url_for('main.interview_pitches')}}" class="btn btn-info btn-center -center">Click view</a>
+
+<body>
+
+    <div class=back>
+        <div class=" text-center " style="font-family: 'Indie Flower', cursive; color: #fff; padding: 55px 25px; ">
+            <h1 class="head"><strong>Welcome to the Best pitch</strong></h1>
+        </div>
+        <hr>
+        <br><br>
+        <div class="container" style="font-family: 'Cormorant Upright', serif;">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="well well-lg" style="text-align: center;">
+                        <h3>Interviews Pitches</h3>
+                        <hr>
+                        <p>Essentially it’s a short summary about yourself and what you do, in an interview. </p>
+                        <a href="{{url_for('main.interview_pitches')}}" class="btn btn-info btn-center -center">Click to
+                            view</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4" style="text-align: center;">
-                <div class="well well-lg">
-                    <h3>Products Pitches</h3>
-                    <p>Make it short. · Make it clear. · Explain who your customers are. · Explain the problem they're facing. </p>
-                    <a href="{{url_for('main.product_pitches')}}" class="btn btn-info -center">Click view</a>
+                <div class="col-md-4" style="text-align: center;">
+                    <div class="well well-lg">
+                        <h3>Products Pitches</h3>
+                        <hr>
+                        <p>Make it short. · Make it clear. · Explain who your customers are. · Explain the problem
+                            they're facing. </p>
+                        <a href="{{url_for('main.product_pitches')}}" class="btn btn-info -center">Click to view</a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <div class="well well-lg" style="text-align: center;">
-                    <h3>Promotion Pitches</h3>
-                    <p>A sales pitch is a condensed sales presentation where a salesperson explains the nature and benefits of their business, ideally in less than one or two minutes.</p>
-                    <a href="{{url_for('main.promotion_pitches')}}" class="btn btn-info -center">Click view</a>
+                <div class="col-md-4">
+                    <div class="well well-lg" style="text-align: center;">
+                        <h3>Promotion Pitches</h3>
+                        <hr>
+                        <p>A sales pitch is a condensed sales presentation,a salesperson explains the nature and
+                            benefits of their business in less than one or two minutes.</p>
+                        <a href="{{url_for('main.promotion_pitches')}}" class="btn btn-info -center">Click to view</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div style="padding-bottom: 20px; text-align: center;">
+            <a href="{{url_for('main.new_pitch')}}" class="btn btn-info btn-center">Click to create a pitch</a>
+        </div>
     </div>
-    <div style="padding-bottom: 20px; text-align: center;">
-        <a href="{{url_for('main.new_pitch')}}" class="btn btn-info btn-center">Click to create a pitch</a>
-    </div>
-</div>
+</body>
 
 {%endblock%}
