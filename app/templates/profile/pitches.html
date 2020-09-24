@@ -13,7 +13,7 @@
                 {% if user.profile_pic_path %}
                 <img class="" src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
                 {%else%}
-                <p>No profile picture</p>
+                <p>Upps! no profile picture🤪</p>
                 {% endif %}
             </div>
         </div>
@@ -24,7 +24,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-              <h3> Pitches </h3>
+              <h2><b>Pitches</b> </h2>
               <hr>
                {{macro.displayPitches(pitches)}}
             </div>

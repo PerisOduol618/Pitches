@@ -2,13 +2,17 @@
 {% import "bootstrap/wtf.html" as wtf %}
 
 {% block content %}
+<div class>
     <div class="container">
-        <div class="col-md-12">
-            <h3>Create a pitch</h3>
+        <div class="col-md-12 ">
+            <h3 class="text-center">Create a new pitch</h3>
             <hr>
-            {{ wtf.quick_form(pitch_form) }}
+            <div class="container bg-info">
+                {{ wtf.quick_form(pitch_form) }}
+            </div>
         </div>
 
     </div>
+</div>
 
 {% endblock %}

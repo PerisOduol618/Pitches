@@ -23,8 +23,9 @@
         </a>{{pitch.dislikes}}</span>
 
     </div>
+    <br>
     <div class="row">
-        <h4>Comments</h4>
+        <h4>Add comments</h4>
         <hr>
         {% if current_user.is_authenticated %}
             {{ wtf.quick_form(comment_form) }}

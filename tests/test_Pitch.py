@@ -1,15 +1,16 @@
-from app.models import Comment,User,Pitch
+from ..models import Comment,User,Pitch
 from app import db
 import unittest
 
 class PitchModelTest(unittest.TestCase):
     def setUp(self):
-        self.user_James = User(username = 'James',password = 'potato', email = 'james@ms.com')
+        self.user_Peris = User(username = 'Peris',password = 'banana', email = 'james@ms.com')
         self.new_pitch = Pitch(id=1,pitch_title='Test',pitch_content='This is a test pitch',category="interview",user = self.user_James,likes=0,dislikes=0)
 
     def tearDown(self):
-        Pitch.query.delete()
         User.query.delete()
+        Pitch.query.delete()
+      
 
     def test_check_instance_variables(self):
         self.assertEquals(self.new_pitch.pitch_title,'Test')
