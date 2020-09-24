@@ -11,7 +11,7 @@
             <div class="thumbnail">
                 {% if user.profile_pic_path %}
                 <img class="" src="{{url_for('static', filename=user.profile_pic_path)}}" alt="profile"
-                    class="img-thumbnail">
+                    class="img-circle img-responsive">
                 {%else%}
                 <p>No profile picture</p>
                 {% endif %}
@@ -32,7 +32,7 @@
         </div>
 
         <div class="col-md-4">
-            <h3> Bio </h3>
+            <h3>Add Your Bio </h3>
 
             <!--Displaying user bio-->
             {% if user.bio %}
