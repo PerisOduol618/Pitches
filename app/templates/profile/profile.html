@@ -4,45 +4,47 @@
 <div class="container">
     <div class="row">
         <!-- displaying  Username-->
-        <h1> {{user.username| capitalize}} </h1>
+        <h1 class="text-center"> {{user.username| capitalize}} </h1>
         <hr>
         <!--Display profile photo-->
-        <div class="col-md-3">
+        <div class="col-md-4">
             <div class="thumbnail">
                 {% if user.profile_pic_path %}
-                <img class="" src="{{url_for('static', filename=user.profile_pic_path)}}" alt="profile" class="img-thumbnail">
+                <img class="" src="{{url_for('static', filename=user.profile_pic_path)}}" alt="profile"
+                    class="img-thumbnail">
                 {%else%}
                 <p>No profile picture</p>
                 {% endif %}
 
                 {% if user == current_user %}
-                <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype="multipart/form-data">
+                <form action="{{url_for('main.update_pic',uname=user.username)}}" method="post"
+                    enctype="multipart/form-data">
                     <input type="file" name="photo" class="form-control" required>
-                       <input type="submit">
+                    <input type="submit">
                 </form>
-                    {% endif %}
+                {% endif %}
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
             <p> <b>Name:</b> {{user.firstname}} {{user.lastname}} </p>
             <p><b> No of piches:</b> {{pitches}}</p>
             <p><b> Date joined: </b>{{date}}</p>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-          <h3> Bio </h3>
 
-          <!--Displaying user bio-->
-          {% if user.bio %}
+        <div class="col-md-4">
+            <h3> Bio </h3>
+
+            <!--Displaying user bio-->
+            {% if user.bio %}
             <p> {{user.bio}}</p>
-          {%else%}
+            {%else%}
             <p> {{user.username| capitalize}} has no bio </p>
-          {% endif %}
+            {% endif %}
 
-          {% if user == current_user %}
-          <a href="{{url_for('main.update_profile',uname=user.username)}}"><button type="button" class="btn btn-info">Edit profile</button></a>
-          {% endif %}
+            {% if user == current_user %}
+            <a href="{{url_for('main.update_profile',uname=user.username)}}"><button type="button"
+                    class="btn btn-info">Edit profile</button></a>
+            {% endif %}
         </div>
     </div>
 </div>
