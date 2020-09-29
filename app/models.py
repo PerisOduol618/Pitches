@@ -90,6 +90,7 @@ class Comment(db.Model):
     def save_comment(self):
         db.session.add(self)
         db.session.commit()
+        
 
     @classmethod
     def get_comments(cls,pitch):
